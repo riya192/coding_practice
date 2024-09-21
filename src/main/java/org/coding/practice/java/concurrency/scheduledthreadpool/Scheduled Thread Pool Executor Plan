@@ -1,0 +1,13 @@
+Scheduled Thread Pool
+
+Interface - >
+
+submitTask(task, delay)
+
+DelayedPriorityQueue ->
+
+PriorityQueue <DelayedTask> -> make it thread safe
+
+ThreadPoolExecutor ->
+
+same as normal thread -> just the get function will ensure delay time

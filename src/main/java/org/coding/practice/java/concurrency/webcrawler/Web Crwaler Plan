@@ -1,0 +1,4 @@
+//concurrency how much - ? let's say 2
+
+//queue -> start nodes
+//workers waiting to start

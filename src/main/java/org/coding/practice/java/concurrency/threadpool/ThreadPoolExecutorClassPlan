@@ -1,0 +1,38 @@
+ThreadPoolExecutor ->
+
+params -
+1. corePoolSize
+2. maxPoolSize
+3. queue size
+4. ArrayBoundBlockingQueue<>(queue size) -> operations synchronized
+5. Thread Lists maintain needed? -> maybe to kill if they are waiting for a ling time
+
+internal -
+1. current thread count
+
+
+features -
+1. thread < corePoolSize -> create a thread
+2. corePoolSize to queue -> add it to a queue
+3. thread till max size -> if need to process based on insertion ->
+thread create using first task in queue and insert this in the queue
+
+function ->
+
+execute(Runnable task)
+{
+    implement ->
+    to create thread -> thread factory
+    start the thread here
+}
+
+
+class ThreadFactory -> Runnable input -> Worker Thread Instance// why a factory ,
+I can choose to change the thread implementation
+
+class WorkerThread implements Runnable
+param -> task
+
+run function -> start the task
+
+
